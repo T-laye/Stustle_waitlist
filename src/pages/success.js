@@ -1,7 +1,7 @@
 import Layout from "@/layout";
 import Image from "next/image";
 import React from "react";
-import hour from "public/hourGlass.png";
+import hour from "public/hourGlass.svg";
 import Link from "next/link";
 
 export default function Success() {

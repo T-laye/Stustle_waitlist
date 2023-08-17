@@ -10,7 +10,10 @@ export default function Button() {
 
   return (
     <div className="w-full flex justify-center">
-      <button onClick={goToForm} className="btn bg-primaryColor w-2/3">
+      <button
+        onClick={goToForm}
+        className="btn bg-primaryColor max-[290px]:w-full w-2/3"
+      >
         Join the waitlist
       </button>
     </div>
