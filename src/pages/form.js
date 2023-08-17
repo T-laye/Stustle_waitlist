@@ -113,7 +113,7 @@ export default function Form() {
             </div>
             <div className=" mb-6">
               <label className="text-sm mb-2" htmlFor="phone">
-                Phone Number
+                Phone Number (preferably whatsapp)
               </label>
               <input
                 id="phone"
