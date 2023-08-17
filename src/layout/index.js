@@ -11,7 +11,7 @@ export default function Layout({ title, children }) {
         <title>{title ? title + " | Stustle" : " Stustle"}</title>
         <meta name="description" content="Service Rendering Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={Logo} />
+        <link rel="icon" href="/stustle_logo.svg" />
       </Head>
       <header className="bg-green300 px-4  h-[6vh]">
         <div className="container mx-auto  bg-red300 h-full flex items-end">
