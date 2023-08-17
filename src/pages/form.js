@@ -5,8 +5,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useEffect, useState } from "react";
 import { validation } from "../../lib/validate";
+import { useRouter } from "next/router";
 
 export default function Form() {
+  const router = useRouter();
   const [isFormValid, setIsFormValid] = useState(false);
   const [pending, setPending] = useState(false);
   const formik = useFormik({
@@ -32,8 +34,18 @@ export default function Form() {
         body: JSON.stringify(values),
       });
 
-      if (res) {
+      if (res.ok) {
         toast.success("Submission Successful");
+        setPending(false);
+
+        // formik.setFieldValue("name", "");
+        // formik.setFieldValue("email", "");
+        // formik.setFieldValue("phone", "");
+        setTimeout(() => {
+          router.push("/success");
+        }, 1000);
+      } else {
+        toast.error("Submission failed, please try again.git");
         setPending(false);
       }
 
@@ -41,7 +53,7 @@ export default function Form() {
       // console.log(res.data);
       // console.log(res.data.tableRange);
     } catch (error) {
-      toast.error("Submission failed, please try again.git");
+      console.log(error);
     }
   }
 
