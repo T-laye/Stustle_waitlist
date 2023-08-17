@@ -1,27 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@300;400;500&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  @apply bg-white;
+}
+html {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  @apply bg-white;
+}
+
+input {
+  @apply text-base caret-primaryColor focus:border outline-none focus:outline-none focus:border-activePrimary border border-lightGray h-12 rounded-md px-2 duration-500 dark:bg-black dark:text-white dark:placeholder:text-lightGray;
+}
+
+.btn {
+  @apply shadow-sm text-lg rounded-xl flex items-center justify-evenly px-4 text-white  h-10 duration-150;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+.btn:active {
+  transform: scale(0.98);
 }
