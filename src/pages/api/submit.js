@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
     const sheets = google.sheets({
       version: "v4",
-      auth: authentication, // Use 'auth' instead of 'authentication'
+      auth: authentication,
     });
 
     const response = await sheets.spreadsheets.values.append({
