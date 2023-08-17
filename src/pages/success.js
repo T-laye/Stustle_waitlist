@@ -10,7 +10,7 @@ export default function Success() {
       try {
         await navigator.share({
           title: "Stustle Link",
-          url: `https://stustle-waitlist.vercel.app/`, // Replace with your site's URL
+          url: `https://www.stustle.com/`, // Replace with your site's URL
         });
       } catch (error) {
         console.error("Error sharing:", error);
@@ -18,9 +18,7 @@ export default function Success() {
     } else {
       // Fallback behavior if `navigator.share()` is not available
       try {
-        await navigator.clipboard.writeText(
-          `https://stustle-waitlist.vercel.app/`
-        ); // Replace with your site's URL
+        await navigator.clipboard.writeText(`https://www.stustle.com/`);
         alert("Link copied to clipboard!");
       } catch (error) {
         console.error("Error copying to clipboard:", error);
