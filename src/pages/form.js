@@ -142,8 +142,8 @@ export default function Form() {
               </div>
               <div className="text-[10px]  ml-2 text-primaryColor">
                 <label htmlFor="checkbox">
-                  I agree with the I agree to receive promotion and marketing
-                  news from your newsletter.
+                  I agree to receive promotion and marketing news from your
+                  newsletter.
                 </label>
               </div>
             </div>
