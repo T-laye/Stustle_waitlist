@@ -40,12 +40,12 @@ export default function SendMail({ sheetdata }) {
       const promises = emails?.map(async (email) => {
         // const email = mail;
         try {
-          //   const res = await axios.post("/api/massMail", {
-          //     email,
-          //     subject,
-          //     message,
-          //   });
-          console.log(values);
+            const res = await axios.post("/api/massMail", {
+              email,
+              subject,
+              message,
+            });
+        //   console.log(values);
 
           //   if (res.data) {
           setPending(false);
