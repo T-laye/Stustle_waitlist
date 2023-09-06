@@ -86,7 +86,7 @@ export default async function handler(req, res) {
               width: 40%;
             "
             href="https://www.stustle.com/"
-            >Find help now</a
+            >Sign Up Now</a
           >
         </div>
         <div style="width: 50%; padding: 0 20px; margin-top: 30px">
