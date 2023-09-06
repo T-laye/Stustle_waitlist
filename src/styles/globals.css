@@ -33,3 +33,7 @@ input {
 .myShadow {
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 1);
 }
+
+textarea {
+  @apply text-base caret-primaryColor focus:border outline-none focus:outline-none focus:border-activePrimary border border-lightGray  rounded-md px-2 duration-500 resize-none h-32 dark:bg-black dark:text-white dark:placeholder:text-lightGray;
+}
