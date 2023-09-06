@@ -40,12 +40,12 @@ export default function SendMail({ sheetdata }) {
       const promises = emails?.map(async (email) => {
         // const email = mail;
         try {
-            const res = await axios.post("/api/massMail", {
-              email,
-              subject,
-              message,
-            });
-        //   console.log(values);
+          const res = await axios.post("/api/massMail", {
+            email,
+            subject,
+            message,
+          });
+          //   console.log(values);
 
           //   if (res.data) {
           setPending(false);
@@ -101,9 +101,9 @@ export default function SendMail({ sheetdata }) {
                 className={`${getInputClassNames("subject")} py-1`}
                 {...formik.getFieldProps("subject")}
               />
-              {formik.touched.message && formik.errors.message && (
+              {formik.touched.subject && formik.errors.subject && (
                 <div className="text-error text-sm">
-                  {formik.errors.message}
+                  {formik.errors.subject}
                 </div>
               )}
             </div>
@@ -148,8 +148,8 @@ export default function SendMail({ sheetdata }) {
 
 export async function getServerSideProps() {
   try {
-    // const req = await fetch("http://localhost:3001/api/sheet");
-    const req = await fetch("https://www.stustle.com/api/sheet");
+    const req = await fetch("http://localhost:3001/api/sheet");
+    // const req = await fetch("https://www.stustle.com/api/sheet");
 
     if (!req.ok) {
       throw new Error("Failed to fetch data");

@@ -48,23 +48,17 @@ export default async function handler(req, res) {
             overflow: hidden;
             height: 200px;
             margin-top: 20px;
-            background-image: url('https://i.postimg.cc/R0tCpQT0/Rectangle-177.png');
+            background-image: url('https://i.postimg.cc/SRHkvZFQ/product112.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
           "
         >
-          <h1 style="padding: 0 20px; color: #ffffff">
-            Get tasks off your hands
-          </h1>
-          <h6 style="padding: 0 20px; color: #ffffff; width: 40%">
-            On your busy days rely on us. We run so you can relax.
-          </h6>
         </div>
         <div
           style="width: 80%; margin-top: 20px; font-size: 20px; padding: 0 20px"
         >
-          <p>Hi there,</p>
+          <p>${subject}</p>
         </div>
         <div style="width: 80%; padding: 0 20px; margin-top: 30px">
           <p>
