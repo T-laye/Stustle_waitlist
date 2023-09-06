@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { contact, contact_message } from "../../lib/validate";
 import Loader from "src/components/Loader.js";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import Layout from "@/layout";
 import axios from "axios";
 
@@ -34,23 +34,30 @@ export default function SendMail({ sheetdata }) {
   ];
 
   async function handleSubmit(values) {
+    setPending(true);
     const { subject, message } = values;
     try {
       const promises = emails?.map(async (email) => {
         // const email = mail;
         try {
-          const res = await axios.post("/api/massMail", {
-            email,
-            subject,
-            message,
-          });
+          //   const res = await axios.post("/api/massMail", {
+          //     email,
+          //     subject,
+          //     message,
+          //   });
+          console.log(values);
 
-          //   toast.success(`sent to ${firstName}`);
-          //   formik.setFieldValue('message', '')
-          //   formik.setFieldValue('subject', '')
+          //   if (res.data) {
+          setPending(false);
+          toast.success(`sent to ${email}`);
+          // }
 
-          console.log(res);
+          //   formik.setFieldValue("message", "");
+          //   formik.setFieldValue("subject", "");
+
+          //   console.log(res);
         } catch (error) {
+          setPending(false);
           console.log(error);
         }
       });

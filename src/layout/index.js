@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import Logo from "../../public/stustle_logo.svg";
 import Link from "next/link";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Layout({ title, children }) {
   return (
@@ -33,6 +35,8 @@ export default function Layout({ title, children }) {
         <meta name="msapplication-TileColor" content="#e29507" />
         <meta name="theme-color" content="#e29507" />
       </Head>
+
+      <ToastContainer />
       <div className=" max-h-screen h-screen">
         <header className="bg-green300 px-4 bg-white mx-auto h-[6vh]  max-w-xl ">
           <div className="container mx-auto  bg-red300 h-full flex items-end">
