@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     // const gsapi = google.sheets({ version: "v4", auth: client });
     const opt = {
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet1!A2:C",
+      range: "Sheet1!B2:B",
     };
 
     const data = await sheets.spreadsheets.values.get(opt);
