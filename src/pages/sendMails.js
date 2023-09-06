@@ -148,8 +148,8 @@ export default function SendMail({ sheetdata }) {
 
 export async function getServerSideProps() {
   try {
-    const req = await fetch("http://localhost:3001/api/sheet");
-    // const req = await fetch("https://www.stustle.com/api/sheet");
+    // const req = await fetch("http://localhost:3001/api/sheet");
+    const req = await fetch("https://www.stustle.com/api/sheet");
 
     if (!req.ok) {
       throw new Error("Failed to fetch data");
