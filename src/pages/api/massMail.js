@@ -37,7 +37,7 @@ export default async function handler(req, res) {
       <div style="padding: 20px 0px 0px">
         <div style="width: 76px; padding: 0 20px">
           <img
-            src="https://i.postimg.cc/L5yz4XMM/LOGO.png"
+            src="https://res.cloudinary.com/dlbvrotqu/image/upload/v1694100834/LOGO_gh4fux.png"
             alt="Stustle"
             style="width: 100%"
           />
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
             overflow: hidden;
             height: 200px;
             margin-top: 20px;
-            background-image: url('https://i.postimg.cc/SRHkvZFQ/product112.png');
+            background-image: url('https://res.cloudinary.com/dlbvrotqu/image/upload/v1694100768/product112_pyin1w.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -116,7 +116,7 @@ export default async function handler(req, res) {
           >
             <img
               style="height: 100%"
-              src="https://i.postimg.cc/P5tJWFqV/skill-icons-instagram.png"
+              src="https://res.cloudinary.com/dlbvrotqu/image/upload/v1694100881/skill-icons_instagram_vbglan.png"
               alt="insta"
             />
           </a>

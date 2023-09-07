@@ -12,7 +12,7 @@ export default function SendMail({ sheetdata }) {
   const [pending, setPending] = useState(false);
   //   const router = useRouter();
 
-  //   const emails = sheetdata.data.flat();
+//   const emails = sheetdata.data.flat();
   //   console.log(emails);
 
   const formik = useFormik({
@@ -24,14 +24,14 @@ export default function SendMail({ sheetdata }) {
     onSubmit: handleSubmit,
   });
 
-  const emails = [
-    "tlayefaah@gmail.com",
-    "stustledev@gmail.com",
-    "damilola.julius@yahoo.com",
-    "janeagadiabiz@gmail.com",
-    "tjagadia24@gmail.com",
-    "omodeefunmi@gmail.com",
-  ];
+    const emails = [
+      "tlayefaah@gmail.com",
+      "stustledev@gmail.com",
+      "damilola.julius@yahoo.com",
+      "janeagadiabiz@gmail.com",
+      "tjagadia24@gmail.com",
+      "omodeefunmi@gmail.com",
+    ];
 
   async function handleSubmit(values) {
     setPending(true);
@@ -149,7 +149,9 @@ export default function SendMail({ sheetdata }) {
 export async function getServerSideProps() {
   try {
     // const req = await fetch("http://localhost:3001/api/sheet");
-    const req = await fetch("https://www.stustle-waitlist.vercel.app/api/sheet");
+    const req = await fetch(
+      "https://www.stustle-waitlist.vercel.app/api/sheet"
+    );
 
     if (!req.ok) {
       throw new Error("Failed to fetch data");
